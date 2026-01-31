@@ -25,10 +25,19 @@
 #include <libsolutil/TemporaryDirectory.h>
 
 #include <boost/algorithm/string/join.hpp>
+#include <boost/version.hpp>
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#if (BOOST_VERSION < 108800)
 #include <boost/process.hpp>
+#else
+#define BOOST_PROCESS_VERSION 1
+#include <boost/process/v1/child.hpp>
+#include <boost/process/v1/io.hpp>
+#include <boost/process/v1/pipe.hpp>
+#include <boost/process/v1/search_path.hpp>
+#endif
 
 using solidity::langutil::InternalCompilerError;
 using solidity::util::errinfo_comment;
