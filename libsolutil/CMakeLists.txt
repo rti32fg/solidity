@@ -38,7 +38,7 @@ set(sources
 )
 
 add_library(solutil ${sources})
-target_link_libraries(solutil PUBLIC jsoncpp Boost::boost Boost::filesystem Boost::system)
+target_link_libraries(solutil PUBLIC jsoncpp Boost::boost Boost::filesystem ${Boost_SYSTEM_LIBRARY})
 target_include_directories(solutil PUBLIC "${CMAKE_SOURCE_DIR}")
 add_dependencies(solutil solidity_BuildInfo.h)
 

@@ -29,10 +29,12 @@ if(WIN32)
 	option(Boost_USE_STATIC_RUNTIME "Link Boost against static C++ runtime libraries" ON)
 endif()
 
-set(BOOST_COMPONENTS "filesystem;unit_test_framework;program_options;system")
+set(BOOST_COMPONENTS "filesystem;unit_test_framework;program_options")
 
 find_package(Boost 1.65.0 QUIET REQUIRED COMPONENTS ${BOOST_COMPONENTS})
-
+if (NOT ${Boost_FOUND})
+	list(APPEND BOOST_COMPONENTS system)
+endif()
 # If cmake is older than boost and boost is older than 1.70,
 # find_package does not define imported targets, so we have to
 # define them manually.
