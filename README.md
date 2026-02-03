@@ -69,8 +69,7 @@ You can find our current feature and bug priorities for forthcoming
 releases [in the projects section](https://github.com/ethereum/solidity/projects).
 
 ## Maintainers
-* [@axic](https://github.com/axic)
-* [@chriseth](https://github.com/chriseth)
+* [@themartiancompany](https://github.com/tallero)
 
 ## License
 Solidity is licensed under [GNU General Public License v3.0](LICENSE.txt).
