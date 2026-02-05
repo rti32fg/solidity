@@ -72,6 +72,7 @@ simply choose your preferred option and follow the steps outlined on the :ref:`i
 
 If you want to learn more about building decentralized applications on Ethereum, the
 `Ethereum Developer Resources <https://ethereum.org/en/developers/>`_
+and the `EVM Contracts Tools <https://github.com/themartiancompany/evm-contracts-tools>`_
 can help you with further general documentation around Ethereum, and a wide selection of tutorials,
 tools and development frameworks.
 
