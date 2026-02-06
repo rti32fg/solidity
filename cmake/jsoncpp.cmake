@@ -50,6 +50,7 @@ ExternalProject_Add(jsoncpp-project
                -DJSONCPP_WITH_PKGCONFIG_SUPPORT=OFF
                -DCMAKE_CXX_FLAGS=${JSONCPP_CXX_FLAGS}
                -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     ${byproducts}
 )
 

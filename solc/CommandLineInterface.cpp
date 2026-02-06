@@ -622,7 +622,8 @@ void CommandLineInterface::createFile(string const& _fileName, string const& _da
 
 void CommandLineInterface::createJson(string const& _fileName, string const& _json)
 {
-	createFile(boost::filesystem::basename(_fileName) + string(".json"), _json);
+	boost::filesystem::path _path (_fileName);
+	createFile(_path.stem().string() + string(".json"), _json);
 }
 
 bool CommandLineInterface::parseArguments(int _argc, char** _argv)
