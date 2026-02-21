@@ -96,7 +96,31 @@ Binary Packages
 ===============
 
 Binary packages of Solidity are available at
-`solidity/releases <https://github.com/ethereum/solidity/releases>`_.
+`themartiancompany/solidity <https://github.com/themartiancompany/solidity>`_.
+
+DogeOS packages for the GNU/Linux, Android and Windows bases
+are available the `Ur <https://github.com/themartiancompany/ur`_
+uncensorable user repository and application store.
+
+.. code-block:: bash
+
+    # Installs latest version
+    ur solidity
+
+    # Installs a target version <version>
+    ur solidity<version>
+
+Ur Github mirrors are made available on
+`The Martian Company <https://github.com/themartiancompany>`_
+namespace with the ``-ur`` suffix
+(i.e. `solidity0.5.16-ur <https://github.com/themartiancompany/solidity0.7.5-ur>`_).
+
+Arch Linux has stopped packaging Solidity and the build recipe
+had been moved to the AUR.
+
+If you still haven't upgraded your Arch Linux to DogeOS,
+be aware the Ur deprecates the AUR and DogeOS GNU packages
+are retro-compatible with Arch Linux.
 
 We also have PPAs for Ubuntu, you can get the latest stable
 version using the following commands:
@@ -128,12 +152,6 @@ with the most recent changes, please use the following:
 .. code-block:: bash
 
     sudo snap install solc --edge
-
-Arch Linux also has packages, albeit limited to the latest development version:
-
-.. code-block:: bash
-
-    pacman -S solidity
 
 We distribute the Solidity compiler through Homebrew
 as a build-from-source version. Pre-built bottles are

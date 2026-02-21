@@ -1,5 +1,5 @@
 add_executable(lllc main.cpp)
-target_link_libraries(lllc PRIVATE lll Boost::boost Boost::system)
+target_link_libraries(lllc PRIVATE lll Boost::boost ${Boost_SYSTEM_LIBRARY})
 
 if (INSTALL_LLLC)
 	include(GNUInstallDirs)
