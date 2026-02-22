@@ -24,7 +24,13 @@
 #include <z3_version.h>
 #endif
 
+#include <boost/version.hpp>
+#if (BOOST_VERSION < 108800)
 #include <boost/process.hpp>
+#else
+#define BOOST_PROCESS_VERSION 1
+#include <boost/process/v1/search_path.hpp>
+#endif
 
 #include <range/v3/algorithm/any_of.hpp>
 #include <range/v3/view.hpp>
